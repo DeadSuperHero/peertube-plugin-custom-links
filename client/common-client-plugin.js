@@ -10,14 +10,14 @@ function register ({ registerHook, peertubeHelpers }) {
         panel.innerHTML = html;
       }
       setInterval(async function(){
-        if (document.querySelector('.top-menu .custom-links') === null && c['custom_links_markdown']) {
-          const topMenu = document.querySelector('.top-menu');
-          if (topMenu) {
-            topMenu.appendChild(panel);
+        if (document.querySelector('.main-menu .custom-links') === null && c['custom_links_markdown']) {
+          const mainMenu = document.querySelector('.main-menu');
+          if (mainMenu) {
+            mainMenu.appendChild(panel);
           }
         }
-        if (document.querySelector('.menu-wrapper .custom-links') === null && c['custom_links_markdown']) {
-          const mainContent = document.querySelector('.menu-wrapper');
+        if (document.querySelector('.main-menu-wrapper .custom-links') === null && c['custom_links_markdown']) {
+          const mainContent = document.querySelector('.main-menu-wrapper');
           if (mainContent) {
             panel.classList.add('section')
             mainContent.appendChild(panel)
